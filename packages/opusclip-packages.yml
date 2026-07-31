@@ -1,0 +1,26 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/opus-pro
+notes: >-
+  OpusClip's marketing (https://www.opus.pro/api) advertises "6+ official SDKs"
+  for Node, Python, Go, PHP, Ruby, and Java, but no first-party SDK packages were
+  discoverable on npm, PyPI, Maven Central, NuGet, pkg.go.dev, RubyGems or
+  Packagist at enrichment time (npm/PyPI lookups 404). The verifiable first-party
+  client tooling is the bundled CLI and the hosted MCP server, catalogued below.
+packages:
+- language: javascript
+  registry: github
+  name: opusclip (bundled CLI)
+  url: https://github.com/opus-pro/opus-skills
+  install: /plugin marketplace add opus-pro/opus-skills
+  official: true
+  kind: cli
+  description: Bundled Node.js CLI wrapping the OpusClip REST API, shipped inside the opus-skills Agent Skill marketplace.
+- language: any
+  registry: github
+  name: opusclip-mcp
+  url: https://github.com/opus-pro/opusclip-mcp
+  install: connect to https://mcp.opus.pro/mcp
+  official: true
+  kind: mcp-server
+  description: Hosted (remote) MCP server exposing 26 OpusClip tools.

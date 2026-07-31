@@ -1,0 +1,63 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/opusclip-openapi-original.json
+entities:
+- name: ClipProject
+  schema: ClipProjectRepresentation
+  id_field: projectId
+  key_fields: [id, userId, orgId, sourcePlatform, sourceUri, stage, curationPref, importPref, renderPref]
+- name: ExportableClip
+  schema: ExportableClipRepresentation
+  id_field: id
+  key_fields: [projectId, runId, curationId, orgId, userId, uriForPreview, uriForExport, durationMs, title, genre]
+- name: BrandTemplate
+  schema: BrandTemplateRepresentation
+  id_field: templateId
+  key_fields: [name, isDefault, preferences, type]
+- name: Collection
+  schema: CollectionDto
+  id_field: collectionId
+- name: CollectionContent
+  schema: CollectionContentDto
+- name: CensorJob
+  schema: CensorJobResponse
+  id_field: jobId
+- name: GenerativeJob
+  schema: GenerativeJobStatusResponse
+  id_field: jobId
+- name: Transcript
+  schema: TranscriptResponse
+- name: SocialCopyJob
+  id_field: jobId
+- name: PostTask
+- name: PublishSchedule
+  id_field: scheduleId
+relationships:
+- from: ExportableClip
+  to: ClipProject
+  type: belongs_to
+  via: projectId
+- from: ClipProject
+  to: ExportableClip
+  type: has_many
+  via: projectId
+- from: ClipProject
+  to: BrandTemplate
+  type: has_one
+  via: brandTemplateId
+- from: CollectionContent
+  to: Collection
+  type: belongs_to
+  via: collectionId
+- from: Collection
+  to: CollectionContent
+  type: has_many
+  via: collectionId
+- from: CensorJob
+  to: ExportableClip
+  type: belongs_to
+  via: clipId
+- from: CensorJob
+  to: ClipProject
+  type: belongs_to
+  via: projectId

@@ -1,0 +1,37 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/opus-pro/opus-skills
+binary: opusclip
+runtime: Node.js >= 18 (bundled single-file JS); curl + jq on PATH; ffmpeg optional (storyboard/trim/preview)
+auth: export OPUSCLIP_API_KEY=sk_... (Enterprise/Pro/Max plan required)
+install:
+- host: Claude Code
+  command: /plugin marketplace add opus-pro/opus-skills; /plugin install opusclip@opus-skills
+- host: Codex CLI
+  command: codex plugin marketplace add github:opus-pro/opus-skills
+- host: OpenClaw
+  command: openclaw plugins install github:opus-pro/opus-skills/skills/opusclip
+- host: npx skills
+  command: npx skills add opus-pro/opus-skills
+surface_style: resource + verb tree (opusclip <resource> <verb>); all commands output JSON
+commands:
+- group: project
+  verbs: [create, list, share, transcript, preview]
+  notes: create accepts --url or --file (4-step GCS upload); model ClipBasic|ClipAnything; --durations, --aspect, --template, --webhook, --dubbing-language, etc.
+- group: clip
+  verbs: [list, get, export, edit, duplicate, trim, storyboard]
+  notes: "edit sub-verbs: get|apply|censor (re-render, charged). export returns HD download URL. trim/storyboard are local ffmpeg."
+- group: collection
+  verbs: [list, clips, create, export, add-clip]
+- group: post
+  verbs: [account list, copy create, copy get, create, schedule, cancel]
+  notes: social posting to YouTube, TikTok, Facebook, Instagram, LinkedIn, X (TWITTER)
+- group: thumbnail
+  verbs: [create]
+  notes: experimental; credit-charged; may 503 (kill switch pro_api_generative_jobs_enabled)
+- group: template
+  verbs: [list]
+- group: usage
+  verbs: []
+  notes: reads GET /api/api-usage?q=mine; reports monthly + concurrent caps
+legacy_aliases: [submit, create-project, upload, list, get-clips, list-projects, describe, templates, transcript, share, share-project, collections, edit-clip, trim, storyboard, preview]

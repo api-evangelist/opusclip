@@ -1,0 +1,47 @@
+generated: '2026-07-20'
+method: searched
+status: published
+source: https://help.opus.pro/api-reference/agent-setup
+repo: https://github.com/opus-pro/opusclip-mcp
+server:
+  name: opusclip
+  transport: http
+  transport_detail: Streamable HTTP (hosted / remote)
+  url: https://mcp.opus.pro/mcp
+  alt_url: https://api.opus.pro/api/mcp
+  auth: OAuth sign-in on first use; tool calls require a paid plan (Enterprise/Pro/Max)
+  clients:
+  - Claude
+  - Cursor
+  - Codex
+  - Cline
+  - Continue
+tools:
+# Read tools
+- name: opusclip_whoami
+- name: opusclip_get_usage
+- name: opusclip_list_projects
+- name: opusclip_list_clips
+- name: opusclip_describe_clip
+- name: opusclip_list_collections
+- name: opusclip_list_clips_in_collection
+- name: opusclip_list_brand_templates
+- name: opusclip_list_social_accounts
+- name: opusclip_get_editing_script
+- name: opusclip_get_transcript
+- name: opusclip_get_social_copy_job
+# Write tools
+- name: opusclip_submit_project
+- name: opusclip_create_upload_link
+- name: opusclip_apply_editing_script
+- name: opusclip_create_censor_job
+- name: opusclip_share_project
+- name: opusclip_create_collection
+- name: opusclip_add_clip_to_collection
+- name: opusclip_export_clip
+- name: opusclip_export_collection
+- name: opusclip_duplicate_clip
+- name: opusclip_create_social_copy_job
+- name: opusclip_create_post_task
+- name: opusclip_schedule_publish
+- name: opusclip_unschedule_publish

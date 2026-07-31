@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: searched
+source: https://help.opus.pro/api-reference/webhook
+spec_type: Webhooks
+notes: >-
+  OpusClip documents webhooks but publishes no AsyncAPI document. Webhooks are
+  opt-in per project via a conclusionActions[] entry of type WEBHOOK carrying the
+  callback url (the CLI exposes --webhook). Delivery is signed with HMAC-SHA256.
+delivery:
+  registration: 'per-project conclusionActions[] entry: {type: WEBHOOK, url, notifyFailure}'
+  signing:
+    algorithm: HMAC-SHA256
+    formula: HMAC-SHA256(secretKey, body + salt)
+    secret: your OpusClip API key (sk_... value); the first key created signs
+    headers:
+    - name: X-Opus-Signature
+      description: HMAC-SHA256 hash of the request body combined with the salt.
+    - name: X-Opus-Salt
+      description: 8 random bytes (hex), regenerated for every request.
+    - name: X-Opus-Timestamp
+      description: Unix time in seconds.
+    verification: raw-body capture, constant-time compare, timestamp validation and salt replay-tracking recommended.
+events:
+- name: project
+  description: Fired when a clip project reaches a terminal stage (completed/failed). Set notifyFailure to also receive failures.

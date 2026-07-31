@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/opusclip-openapi-original.json
+format: plain-json
+notes: >-
+  Responses are plain JSON errors, not RFC 9457 application/problem+json. The
+  OpenAPI only declares 400 and 402 explicitly; the additional status codes and
+  named error below are documented in the CLI/skill reference
+  (https://github.com/opus-pro/opus-skills).
+problems:
+- status: 400
+  title: Bad Request
+  source_operation: openapi/opusclip-openapi-original.json#ClipProjectController_createClipProject
+  remediation: Incompatible option combinations (e.g. --enable-auto-hook with --skip-slicing, --dubbing-language with --target-lang) are rejected up front.
+- status: 402
+  title: Payment Required
+  source_operation: openapi/opusclip-openapi-original.json#ClipProjectController_createClipProject
+  remediation: Insufficient credits / plan does not include API access. Requires Enterprise, Pro (Beta), or Max.
+- status: 403
+  title: Forbidden
+  method: searched
+  remediation: Caller not on a Pro/Enterprise plan, or the requested capability (e.g. thumbnail jobType) is not exposed for the account.
+- status: 429
+  title: Too Many Requests
+  method: searched
+  remediation: 30 req/min rate limit or a daily cap was hit; honor Retry-After.
+- status: 503
+  title: Service Unavailable
+  method: searched
+  remediation: Experimental endpoint temporarily disabled by a kill switch (e.g. pro_api_generative_jobs_enabled). Retry later.
+named_errors:
+- code: QuotaExceedErr
+  meaning: Free/Starter caller invoked a credit-charged, paid-only endpoint (e.g. thumbnail generation).

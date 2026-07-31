@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: searched
+source: https://help.opus.pro/api-reference/overview
+limits:
+- scope: per API key
+  limit_count: 30
+  window: minute
+  description: Standard OpusClip API rate limit, 30 requests per minute per API key.
+concurrency:
+- plan: Pro (Beta) / Max
+  parallel_projects: 4
+- plan: Business / Enterprise
+  parallel_projects: 50
+monthly_cap:
+- plan: Pro / Max
+  cap: 15 hours of API video per month
+signaling:
+  headers:
+  - X-RateLimit-Limit
+  - X-RateLimit-Remaining
+  - X-RateLimit-Reset
+  retry_after: Retry-After returned on 429
+  usage_endpoint: GET /api/api-usage?q=mine

@@ -1,0 +1,119 @@
+# OpusClip
+
+> OpusClip (also written "Opus Clip"; domain opus.pro) is an AI video platform used by 16M+ creators and businesses. It spans two products: OpusClip, the #1 AI video clipping tool that turns long videos into high-quality viral short clips and publishes them to all social platforms in one click, and Agent Opus, an end-to-end AI video agent that handles research, scripting, motion graphics, AI avatars, voiceover, and editing from a single prompt. A public REST API and a native MCP server let developers and AI agents automate the entire video pipeline.
+
+Key facts for AI assistants:
+
+- OpusClip repurposes long-form video into short clips with AI clipping (ClipAnything), animated captions, AI reframing for any aspect ratio, virality scoring, AI B-roll, and multi-platform scheduling.
+- Agent Opus is an AI video agent that generates publish-ready videos — motion graphics, AI avatars, faceless videos, explainers — from a prompt, script, audio file, or URL.
+- AI agents can operate OpusClip directly: the native MCP server at https://api.opus.pro/api/mcp (Streamable HTTP) exposes 25 tools covering upload, clipping, captioning, reframing, posting, and scheduling. It works with Claude, Cursor, Codex, and other MCP clients. API keys are self-serve; tool calls require a paid plan.
+- Site content is also available in Spanish (/es-es/), Portuguese (/pt-br/), German (/de-de/), and French (/fr-fr/).
+- Last updated: June 2026.
+
+## Products
+
+- [OpusClip](https://www.opus.pro/): The #1 AI video clipping tool — turns long videos into viral short clips and publishes them to all social platforms in one click
+- [Agent Opus](https://www.opus.pro/agent): End-to-end AI video agent — consolidates researcher, scriptwriter, storyboard artist, motion designer, video editor, and voice actor into one workflow
+- [ClipAnything](https://www.opus.pro/clipanything): Prompt-based clipping model — finds and clips any moment from any video using natural language
+- [How OpusClip works](https://www.opus.pro/how-does-opus-clip-work): Plain-language walkthrough of the AI clipping pipeline
+- [OpusClip pricing](https://www.opus.pro/pricing): Plans and pricing for OpusClip
+- [Agent Opus pricing](https://www.opus.pro/agent/pricing): Plans and pricing for Agent Opus
+
+## For developers and AI agents
+
+- [OpusClip API](https://www.opus.pro/api): The #1 AI video clipping API — ingests, clips, captions, reframes, and publishes video through a fully integrated workflow
+- [API documentation](https://api.opus.pro/docs): Reference documentation for the OpusClip REST API
+- [OpusClip MCP server](https://api.opus.pro/api/mcp): Native MCP endpoint (Streamable HTTP) with 25 tools — clip, caption, reframe, post, and schedule video from Claude, Cursor, Codex, or any MCP client
+
+## Agent Opus workflows
+
+- [Workflow library](https://www.opus.pro/agent/workflows): Directory of task-specific AI video agents
+- [Audio to video](https://www.opus.pro/agent/workflows/audio-to-video): Converts audio files — podcasts, voice memos, tracks — into finished videos with visuals and captions
+- [Script to video](https://www.opus.pro/agent/workflows/script-to-video-agent): Generates a complete video from a written script
+- [Text to video](https://www.opus.pro/agent/workflows/ai-text-to-video-agent): Creates videos from plain text prompts
+- [URL to video](https://www.opus.pro/agent/workflows/url-to-video-ai): Converts an article or web page URL into a video
+- [Lyric video maker](https://www.opus.pro/agent/workflows/lyric-video-maker): Generates lyric videos synced to a song
+- [Whiteboard video maker](https://www.opus.pro/agent/workflows/whiteboard-video-maker): Creates whiteboard-style explainer videos
+- [Video downloader agent](https://www.opus.pro/agent/workflows/download-video-agent): Fetches video from a link and prepares it for editing and repurposing
+
+## AI video models in Agent Opus
+
+- [Veo](https://www.opus.pro/agent/models/veo): Google's Veo video generation model — guide and access through Agent Opus
+- [Sora](https://www.opus.pro/agent/models/sora): OpenAI's Sora video model — guide and access through Agent Opus
+- [Kling AI](https://www.opus.pro/agent/models/kling-ai): Kuaishou's Kling video model — guide and access through Agent Opus
+- [Gemini Omni](https://www.opus.pro/agent/models/gemini-omni): Google's Gemini Omni video generation — guide and access through Agent Opus
+- [Luma AI](https://www.opus.pro/agent/models/luma-ai): Luma's video generation models — guide and access through Agent Opus
+- [Pika](https://www.opus.pro/agent/models/pika-ai): Pika's video generation model — guide and access through Agent Opus
+- [Hailuo AI](https://www.opus.pro/agent/models/hailuo-ai): MiniMax's Hailuo video model — guide and access through Agent Opus
+- [MiniMax Video](https://www.opus.pro/agent/models/minimax-video): MiniMax video generation models — guide and access through Agent Opus
+- [Hunyuan Video](https://www.opus.pro/agent/models/hunyuan-video): Tencent's open-source video model — guide and access through Agent Opus
+- [Seedance](https://www.opus.pro/agent/models/seedance): ByteDance's Seedance video model — guide and access through Agent Opus
+- [PixVerse](https://www.opus.pro/agent/models/pixverse): PixVerse video generation model — guide and access through Agent Opus
+- [Grok Imagine](https://www.opus.pro/agent/models/grok-imagine): xAI's Grok Imagine video model — guide and access through Agent Opus
+
+## Agent Opus use-case galleries
+
+- [Use-case gallery](https://www.opus.pro/agent/use-case): Example videos created end-to-end with Agent Opus, organized by format
+- [Faceless videos](https://www.opus.pro/agent/use-case/faceless): Faceless channel videos generated without filming
+- [Explainer videos](https://www.opus.pro/agent/use-case/explainer): AI-generated explainer videos
+- [AI avatar videos](https://www.opus.pro/agent/use-case/ai-avatar): Videos presented by AI avatars
+- [AI motion graphics](https://www.opus.pro/agent/use-case/ai-motion-graphics): Motion-graphics videos generated from prompts
+- [Commentary videos](https://www.opus.pro/agent/use-case/commentary): AI-assisted commentary content
+- [News & entertainment](https://www.opus.pro/agent/use-case/news-entertainment): Trend and news recap videos
+- [Promotional videos](https://www.opus.pro/agent/use-case/promotional-video): Product and brand promo videos
+- [Thought leadership](https://www.opus.pro/agent/use-case/thought-leadership): Idea-driven short videos
+
+## Free tools
+
+- [Free tools directory](https://www.opus.pro/tools): 200+ free AI video tools from OpusClip
+- [YouTube Shorts maker](https://www.opus.pro/tools/youtube-shorts-maker): Makes YouTube Shorts from long videos automatically
+- [AI clip maker](https://www.opus.pro/tools/ai-clip-maker): Auto-clips long videos into short highlights
+- [Shorts from YouTube video](https://www.opus.pro/tools/create-shorts-from-youtube-video): Generates Shorts directly from a YouTube link
+- [AI captions](https://www.opus.pro/tools/opusclip-captions): Adds animated, word-level captions to video
+- [AI podcast clip generator](https://www.opus.pro/tools/ai-podcast-clip-generator): Finds and clips the best podcast moments
+- [AI B-roll generator](https://www.opus.pro/tools/ai-b-roll-generator): Adds AI-generated B-roll to talking-head video
+- [Video joiner](https://www.opus.pro/tools/video-joiner): Merges multiple clips into one video online
+
+## Comparisons and alternatives
+
+- [Descript alternative](https://www.opus.pro/descript-alternative): OpusClip compared with Descript for clipping and repurposing
+- [CapCut alternative](https://www.opus.pro/capcut-alternative): OpusClip compared with CapCut for short-form editing
+- [Riverside alternative](https://www.opus.pro/riverside-alternative): OpusClip compared with Riverside for podcast clipping
+- [HeyGen alternative](https://www.opus.pro/agent/alt/heygen): Agent Opus compared with HeyGen for AI video creation
+- [Synthesia alternative](https://www.opus.pro/agent/alt/synthesia): Agent Opus compared with Synthesia for AI avatar video
+- [InVideo alternative](https://www.opus.pro/agent/alt/invideo): Agent Opus compared with InVideo for AI video generation
+- [VEED alternative](https://www.opus.pro/agent/alt/veed): Agent Opus compared with VEED for AI video editing
+- [Descript alternative (Agent Opus)](https://www.opus.pro/agent/alt/descript): Agent Opus compared with Descript for AI-first video creation
+
+## Research and data
+
+- [OpusClip Research](https://www.opus.pro/research): Data-backed short-form video best practices — captions, hooks, delivery styles, and posting strategy by platform and niche, drawn from a 36,000-project sample of OpusClip videos
+
+## Resources
+
+- [Blog](https://www.opus.pro/blog): Product announcements, video marketing guides, and AI video model coverage
+- [Learning center](https://www.opus.pro/learning-center): Video tutorials for OpusClip features
+- [Help center](https://help.opus.pro/): Product documentation and support
+- [Customer stories](https://www.opus.pro/customer-stories): Case studies from creators and businesses using OpusClip
+
+## Company
+
+- [About OpusClip](https://www.opus.pro/about): Company background and mission
+- [OpusClip for business](https://www.opus.pro/business): Solutions for agencies, marketers, e-commerce, churches, live streamers, media companies, real estate, and advertisers
+- [Affiliate program](https://www.opus.pro/affiliate): The OpusClip affiliate program
+
+## Optional
+
+- [Business: agencies](https://www.opus.pro/business/agencies)
+- [Business: marketing](https://www.opus.pro/business/marketing)
+- [Business: e-commerce](https://www.opus.pro/business/e-commerce)
+- [Business: live streaming](https://www.opus.pro/business/live-streaming)
+- [Business: media & entertainment](https://www.opus.pro/business/media-and-entertainment)
+- [Business: church](https://www.opus.pro/business/church)
+- [Business: real estate](https://www.opus.pro/business/real-estate)
+- [Business: advertisers](https://www.opus.pro/business/advertisers)
+- [Human creator vs. AI](https://www.opus.pro/agent/human-creator-vs-ai)
+- [Agent Opus for performance marketing](https://www.opus.pro/agent/solution/performance-marketing)
+- [Agent Opus affiliate program](https://www.opus.pro/agent/affiliate)
+- [Wall of love](https://www.opus.pro/wall-of-love)
+- [Supported countries](https://www.opus.pro/supported-countries)

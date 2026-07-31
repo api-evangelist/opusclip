@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: searched
+source: https://opusclip.canny.io/changelog
+scheme: dated product changelog (Canny)
+current_version: rolling
+entries:
+- date: '2026-07-18'
+  title: You Can Now Add Image Overlays on iOS!
+  type: addition
+- date: '2026-07-14'
+  title: Bring Your Clips to Life with Sound Effects in One Click!
+  type: addition
+- date: '2026-07-10'
+  title: Generate Dynamic AI Video B-Roll with Agent Opus
+  type: addition
+- date: '2026-07-07'
+  title: 'Video Dubbing Is Live: voice cloning across 25 languages'
+  type: addition
+- date: '2026-07-02'
+  title: OpusClip Android App is here
+  type: addition
+- date: '2026-07-01'
+  title: Run OpusClip from Your AI Agent — MCP and Skill Now Available in Beta!
+  type: addition
+  highlights: Native MCP server + Agent Skill (opus-pro/opus-skills) launched in beta.
+- date: '2026-07-01'
+  title: 'Pro users: Brand Template and Social Connection limits doubled (2->4 templates, 6->12 connections)'
+  type: addition

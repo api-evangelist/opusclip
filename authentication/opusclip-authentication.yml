@@ -1,0 +1,18 @@
+generated: '2026-07-20'
+method: searched
+source: openapi/opusclip-openapi-original.json
+docs: https://help.opus.pro/api-reference/overview
+summary:
+  types:
+  - http
+  scheme: HTTP Bearer token; the API key is a JWT-format value passed as a Bearer token
+  header: 'Authorization: Bearer <API_KEY>'
+  org_header: 'x-opus-org-id: <ORG_ID> (required on some endpoints)'
+  key_source: OpusClip dashboard (https://clip.opus.pro/dashboard); Enterprise/Pro(Beta)/Max plans
+schemes:
+- name: bearer
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  sources:
+  - openapi/opusclip-openapi-original.json

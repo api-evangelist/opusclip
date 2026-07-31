@@ -1,0 +1,37 @@
+generated: '2026-07-20'
+method: searched
+source: https://help.opus.pro/api-reference/overview
+authentication:
+  style: HTTP Bearer token (JWT-format API key)
+  header: 'Authorization: Bearer <API_KEY>'
+  org_header: 'x-opus-org-id: <ORG_ID>  (some endpoints)'
+  ref: authentication/opusclip-authentication.yml
+idempotency:
+  supported: false
+  notes: >-
+    No idempotency-key header or parameter is documented. Clip duplication is
+    explicitly "not idempotent — each call creates another copy". Job-creating
+    endpoints (clip-projects, censor-jobs, generative-jobs) return a job id to
+    poll rather than exposing an idempotency contract.
+pagination:
+  style: page-number
+  params:
+    page: 0-based page number (default 0)
+    page_size: items per page, 1-100 (default 20)
+  notes: Used by project/clip listing endpoints.
+async_jobs:
+  pattern: submit-then-poll
+  detail: >-
+    Long-running work (clip projects, censor jobs, social-copy jobs, generative
+    thumbnail jobs) returns a job/project id; poll the GET-by-id endpoint until
+    stage/status is terminal. Completion can also be pushed via a WEBHOOK
+    conclusion action.
+rate_limit_signaling:
+  headers: [X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset]
+  ref: rate-limits/opusclip-rate-limits.yml
+error_envelope:
+  format: plain JSON error (not RFC 9457 problem+json)
+  ref: errors/opusclip-problem-types.yml
+versioning:
+  scheme: unversioned path prefix /api/*; API generations referenced as v2 in docs
+  ref: lifecycle/opusclip-lifecycle.yml

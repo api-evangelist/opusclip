@@ -1,0 +1,29 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for OpusClip Clip API
+  version: 1.0.0
+extends: openapi/opusclip-openapi-original.json
+actions:
+- target: $.info
+  update:
+    x-apievangelist-enriched: '2026-07-20'
+    x-apievangelist-provider: opusclip
+    x-apievangelist-notes: >-
+      HTTP Bearer (JWT-format API key) auth; 30 req/min per key; page/page_size
+      pagination; submit-then-poll async jobs; webhooks via WEBHOOK conclusion
+      action signed with HMAC-SHA256 (X-Opus-Signature/X-Opus-Salt/X-Opus-Timestamp).
+      Hosted MCP server at https://mcp.opus.pro/mcp (26 tools). No RFC 9457 errors,
+      no idempotency contract.
+- target: $.servers
+  update:
+    - url: https://api.opus.pro
+      description: OpusClip Open API Production Server
+- target: $.info
+  update:
+    x-apievangelist-artifacts:
+      mcp: mcp/opusclip-mcp.yml
+      cli: cli/opusclip-cli.yml
+      skills: skills/_index.yml
+      webhooks: asyncapi/opusclip-webhooks.yml
+      conventions: conventions/opusclip-conventions.yml
+      rate_limits: rate-limits/opusclip-rate-limits.yml

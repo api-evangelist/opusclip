@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/opus-pro/opus-skills
+skills:
+- file: opusclip-clip-and-post.md
+  name: opusclip
+  description: Turn long-form videos into short clips and post them to social platforms using the OpusClip API.
+  api: openapi/opusclip-openapi-original.json
+  published: true
+  marketplace: https://github.com/opus-pro/opus-skills
+  operations:
+  - ClipProjectController_createClipProject
+  - ClipProjectController_getClipProjectDetail
+  - ExportableClipController_queryExportableClips
+  - CollectionController_create
+  - CollectionController_export
+  - CensorJobController_createCensorJob
+  - SocialCopyJobController_createSocialCopyJob
+  - PostTaskController_createPostTask
+  - PublishScheduleController_createPublishSchedule
+  - TranscriptController_getTranscript

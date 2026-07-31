@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/opusclip-openapi-original.json
+standards:
+- id: oauth2
+  conforms: false
+  evidence: No oauth2 securityScheme; API uses HTTP Bearer (JWT-format) API keys.
+- id: http-bearer
+  conforms: true
+  evidence: components.securitySchemes.bearer type http, scheme bearer, bearerFormat JWT.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Error responses are plain JSON, not application/problem+json.
+- id: openapi-3.0
+  conforms: true
+  evidence: openapi 3.0.0 document published at https://help.opus.pro/api-reference/openapi.json.
+- id: webhooks-hmac-sha256
+  conforms: true
+  evidence: WEBHOOK conclusion action; payloads signed via X-Opus-Signature (HMAC-SHA256 of body+salt), X-Opus-Salt, X-Opus-Timestamp.
+- id: pagination
+  conforms: true
+  evidence: Page-number pagination (page/page_size) on listing endpoints.
+- id: idempotency
+  conforms: false
+  evidence: No idempotency-key contract documented.

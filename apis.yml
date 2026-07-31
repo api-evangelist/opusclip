@@ -1,24 +1,413 @@
 aid: opusclip
 name: OpusClip
-description: 'OpusClip is a company surfaced as a portfolio company of softbank-vision-fund and added
-  to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  OpusClip (opus.pro), operated by Opusclip Inc. of Mountain View, California, is
+  an AI video platform used by 16M+ creators and businesses. It spans two products:
+  OpusClip, an AI video-clipping tool that turns long-form videos into viral short
+  clips with animated captions, AI reframing, virality scoring, AI B-roll, and
+  multi-platform scheduling; and Agent Opus, an end-to-end AI video agent. OpusClip
+  ships a public REST "Clip API" (https://api.opus.pro) authenticated with Bearer
+  API keys, a hosted MCP server exposing 26 tools, a bundled CLI, a published Agent
+  Skill, webhooks signed with HMAC-SHA256, an OpenAPI 3.0 spec, llms.txt, and
+  security.txt. API access requires an Enterprise, Pro (Beta), or Max plan.
 url: https://raw.githubusercontent.com/api-evangelist/opusclip/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/u/94627721?v=4
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - softbank-vision-fund
-x-tier: stub
+x-tier: enriched
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Consumer
-apis: []
+- Video
+- AI
+- Video Editing
+- Short-Form Video
+- Social Media
+- Content Creation
+- MCP
+- Developer API
+apis:
+- aid: opusclip:opusclip-brand-templates-api
+  name: OpusClip brand-templates API
+  description: The brand-templates API from OpusClip — 1 operation(s) for brand-templates.
+  humanURL: https://help.opus.pro/api-reference/overview
+  baseURL: https://api.opus.pro
+  tags:
+  - brand-templates
+  properties:
+  - type: OpenAPI
+    url: openapi/opusclip-brand-templates-api-openapi.yml
+  - type: Documentation
+    url: https://help.opus.pro/api-reference/overview
+  - type: APIReference
+    url: https://help.opus.pro/api-reference/overview
+  - type: GettingStarted
+    url: https://help.opus.pro/api-reference/quickstart
+  - type: Authentication
+    url: authentication/opusclip-authentication.yml
+  - type: RateLimits
+    url: rate-limits/opusclip-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/opusclip-problem-types.yml
+  - type: Webhooks
+    url: asyncapi/opusclip-webhooks.yml
+  - type: DataModel
+    url: data-model/opusclip-data-model.yml
+- aid: opusclip:opusclip-censor-jobs-api
+  name: OpusClip censor-jobs API
+  description: The censor-jobs API from OpusClip — 2 operation(s) for censor-jobs.
+  humanURL: https://help.opus.pro/api-reference/overview
+  baseURL: https://api.opus.pro
+  tags:
+  - censor-jobs
+  properties:
+  - type: OpenAPI
+    url: openapi/opusclip-censor-jobs-api-openapi.yml
+  - type: Documentation
+    url: https://help.opus.pro/api-reference/overview
+  - type: APIReference
+    url: https://help.opus.pro/api-reference/overview
+  - type: GettingStarted
+    url: https://help.opus.pro/api-reference/quickstart
+  - type: Authentication
+    url: authentication/opusclip-authentication.yml
+  - type: RateLimits
+    url: rate-limits/opusclip-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/opusclip-problem-types.yml
+  - type: Webhooks
+    url: asyncapi/opusclip-webhooks.yml
+  - type: DataModel
+    url: data-model/opusclip-data-model.yml
+- aid: opusclip:opusclip-clip-project-api
+  name: OpusClip clip-project API
+  description: The clip-project API from OpusClip — 3 operation(s) for clip-project.
+  humanURL: https://help.opus.pro/api-reference/overview
+  baseURL: https://api.opus.pro
+  tags:
+  - clip-project
+  properties:
+  - type: OpenAPI
+    url: openapi/opusclip-clip-project-api-openapi.yml
+  - type: Documentation
+    url: https://help.opus.pro/api-reference/overview
+  - type: APIReference
+    url: https://help.opus.pro/api-reference/overview
+  - type: GettingStarted
+    url: https://help.opus.pro/api-reference/quickstart
+  - type: Authentication
+    url: authentication/opusclip-authentication.yml
+  - type: RateLimits
+    url: rate-limits/opusclip-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/opusclip-problem-types.yml
+  - type: Webhooks
+    url: asyncapi/opusclip-webhooks.yml
+  - type: DataModel
+    url: data-model/opusclip-data-model.yml
+- aid: opusclip:opusclip-collection-api
+  name: OpusClip collection API
+  description: The collection API from OpusClip — 3 operation(s) for collection.
+  humanURL: https://help.opus.pro/api-reference/overview
+  baseURL: https://api.opus.pro
+  tags:
+  - collection
+  properties:
+  - type: OpenAPI
+    url: openapi/opusclip-collection-api-openapi.yml
+  - type: Documentation
+    url: https://help.opus.pro/api-reference/overview
+  - type: APIReference
+    url: https://help.opus.pro/api-reference/overview
+  - type: GettingStarted
+    url: https://help.opus.pro/api-reference/quickstart
+  - type: Authentication
+    url: authentication/opusclip-authentication.yml
+  - type: RateLimits
+    url: rate-limits/opusclip-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/opusclip-problem-types.yml
+  - type: Webhooks
+    url: asyncapi/opusclip-webhooks.yml
+  - type: DataModel
+    url: data-model/opusclip-data-model.yml
+- aid: opusclip:opusclip-collection-content-api
+  name: OpusClip collection-content API
+  description: The collection-content API from OpusClip — 2 operation(s) for collection-content.
+  humanURL: https://help.opus.pro/api-reference/overview
+  baseURL: https://api.opus.pro
+  tags:
+  - collection-content
+  properties:
+  - type: OpenAPI
+    url: openapi/opusclip-collection-content-api-openapi.yml
+  - type: Documentation
+    url: https://help.opus.pro/api-reference/overview
+  - type: APIReference
+    url: https://help.opus.pro/api-reference/overview
+  - type: GettingStarted
+    url: https://help.opus.pro/api-reference/quickstart
+  - type: Authentication
+    url: authentication/opusclip-authentication.yml
+  - type: RateLimits
+    url: rate-limits/opusclip-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/opusclip-problem-types.yml
+  - type: Webhooks
+    url: asyncapi/opusclip-webhooks.yml
+  - type: DataModel
+    url: data-model/opusclip-data-model.yml
+- aid: opusclip:opusclip-enterprise-api
+  name: OpusClip enterprise API
+  description: The enterprise API from OpusClip — 18 operation(s) for enterprise.
+  humanURL: https://help.opus.pro/api-reference/overview
+  baseURL: https://api.opus.pro
+  tags:
+  - enterprise
+  properties:
+  - type: OpenAPI
+    url: openapi/opusclip-enterprise-api-openapi.yml
+  - type: Documentation
+    url: https://help.opus.pro/api-reference/overview
+  - type: APIReference
+    url: https://help.opus.pro/api-reference/overview
+  - type: GettingStarted
+    url: https://help.opus.pro/api-reference/quickstart
+  - type: Authentication
+    url: authentication/opusclip-authentication.yml
+  - type: RateLimits
+    url: rate-limits/opusclip-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/opusclip-problem-types.yml
+  - type: Webhooks
+    url: asyncapi/opusclip-webhooks.yml
+  - type: DataModel
+    url: data-model/opusclip-data-model.yml
+- aid: opusclip:opusclip-exportable-clips-api
+  name: OpusClip exportable-clips API
+  description: The exportable-clips API from OpusClip — 1 operation(s) for exportable-clips.
+  humanURL: https://help.opus.pro/api-reference/overview
+  baseURL: https://api.opus.pro
+  tags:
+  - exportable-clips
+  properties:
+  - type: OpenAPI
+    url: openapi/opusclip-exportable-clips-api-openapi.yml
+  - type: Documentation
+    url: https://help.opus.pro/api-reference/overview
+  - type: APIReference
+    url: https://help.opus.pro/api-reference/overview
+  - type: GettingStarted
+    url: https://help.opus.pro/api-reference/quickstart
+  - type: Authentication
+    url: authentication/opusclip-authentication.yml
+  - type: RateLimits
+    url: rate-limits/opusclip-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/opusclip-problem-types.yml
+  - type: Webhooks
+    url: asyncapi/opusclip-webhooks.yml
+  - type: DataModel
+    url: data-model/opusclip-data-model.yml
+- aid: opusclip:opusclip-exportableclip-api
+  name: OpusClip ExportableClip API
+  description: The ExportableClip API from OpusClip — 1 operation(s) for exportableclip.
+  humanURL: https://help.opus.pro/api-reference/overview
+  baseURL: https://api.opus.pro
+  tags:
+  - ExportableClip
+  properties:
+  - type: OpenAPI
+    url: openapi/opusclip-exportableclip-api-openapi.yml
+  - type: Documentation
+    url: https://help.opus.pro/api-reference/overview
+  - type: APIReference
+    url: https://help.opus.pro/api-reference/overview
+  - type: GettingStarted
+    url: https://help.opus.pro/api-reference/quickstart
+  - type: Authentication
+    url: authentication/opusclip-authentication.yml
+  - type: RateLimits
+    url: rate-limits/opusclip-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/opusclip-problem-types.yml
+  - type: Webhooks
+    url: asyncapi/opusclip-webhooks.yml
+  - type: DataModel
+    url: data-model/opusclip-data-model.yml
+- aid: opusclip:opusclip-generative-jobs-api
+  name: OpusClip generative-jobs API
+  description: The generative-jobs API from OpusClip — 2 operation(s) for generative-jobs.
+  humanURL: https://help.opus.pro/api-reference/overview
+  baseURL: https://api.opus.pro
+  tags:
+  - generative-jobs
+  properties:
+  - type: OpenAPI
+    url: openapi/opusclip-generative-jobs-api-openapi.yml
+  - type: Documentation
+    url: https://help.opus.pro/api-reference/overview
+  - type: APIReference
+    url: https://help.opus.pro/api-reference/overview
+  - type: GettingStarted
+    url: https://help.opus.pro/api-reference/quickstart
+  - type: Authentication
+    url: authentication/opusclip-authentication.yml
+  - type: RateLimits
+    url: rate-limits/opusclip-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/opusclip-problem-types.yml
+  - type: Webhooks
+    url: asyncapi/opusclip-webhooks.yml
+  - type: DataModel
+    url: data-model/opusclip-data-model.yml
+- aid: opusclip:opusclip-social-posting-api
+  name: OpusClip social-posting API
+  description: The social-posting API from OpusClip — 6 operation(s) for social-posting.
+  humanURL: https://help.opus.pro/api-reference/overview
+  baseURL: https://api.opus.pro
+  tags:
+  - social-posting
+  properties:
+  - type: OpenAPI
+    url: openapi/opusclip-social-posting-api-openapi.yml
+  - type: Documentation
+    url: https://help.opus.pro/api-reference/overview
+  - type: APIReference
+    url: https://help.opus.pro/api-reference/overview
+  - type: GettingStarted
+    url: https://help.opus.pro/api-reference/quickstart
+  - type: Authentication
+    url: authentication/opusclip-authentication.yml
+  - type: RateLimits
+    url: rate-limits/opusclip-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/opusclip-problem-types.yml
+  - type: Webhooks
+    url: asyncapi/opusclip-webhooks.yml
+  - type: DataModel
+    url: data-model/opusclip-data-model.yml
+- aid: opusclip:opusclip-transcripts-api
+  name: OpusClip transcripts API
+  description: The transcripts API from OpusClip — 1 operation(s) for transcripts.
+  humanURL: https://help.opus.pro/api-reference/overview
+  baseURL: https://api.opus.pro
+  tags:
+  - transcripts
+  properties:
+  - type: OpenAPI
+    url: openapi/opusclip-transcripts-api-openapi.yml
+  - type: Documentation
+    url: https://help.opus.pro/api-reference/overview
+  - type: APIReference
+    url: https://help.opus.pro/api-reference/overview
+  - type: GettingStarted
+    url: https://help.opus.pro/api-reference/quickstart
+  - type: Authentication
+    url: authentication/opusclip-authentication.yml
+  - type: RateLimits
+    url: rate-limits/opusclip-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/opusclip-problem-types.yml
+  - type: Webhooks
+    url: asyncapi/opusclip-webhooks.yml
+  - type: DataModel
+    url: data-model/opusclip-data-model.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DeveloperPortal
+  url: https://help.opus.pro/api-reference/overview
+- type: Documentation
+  url: https://help.opus.pro/api-reference/overview
+- type: APIReference
+  url: https://help.opus.pro/api-reference/overview
+- type: GettingStarted
+  url: https://help.opus.pro/api-reference/quickstart
+- type: Blog
+  url: https://www.opus.pro/blog
+- type: ChangeLog
+  url: https://opusclip.canny.io/changelog
+- type: Roadmap
+  url: https://opusclip.canny.io/feature-requests
+- type: Support
+  url: https://www.opus.pro/contact-support
+- type: Pricing
+  url: https://www.opus.pro/pricing
+- type: SignUp
+  url: https://clip.opus.pro/dashboard
+- type: TermsOfService
+  url: https://www.opus.pro/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.opus.pro/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/opus-pro
+- type: StatusPage
+  url: https://status.opus.pro
+- type: Lifecycle
+  url: lifecycle/opusclip-lifecycle.yml
+- type: ChangeLog
+  name: OpusClip Changelog (artifact)
+  url: changelog/opusclip-changelog.yml
+- type: Authentication
+  url: authentication/opusclip-authentication.yml
+- type: Conventions
+  url: conventions/opusclip-conventions.yml
+- type: RateLimits
+  url: rate-limits/opusclip-rate-limits.yml
+- type: ErrorCatalog
+  url: errors/opusclip-problem-types.yml
+- type: DataModel
+  url: data-model/opusclip-data-model.yml
+- type: Conformance
+  url: conformance/opusclip-conformance.yml
+- type: Webhooks
+  url: asyncapi/opusclip-webhooks.yml
+- type: Packages
+  url: packages/opusclip-packages.yml
+- type: CLI
+  url: cli/opusclip-cli.yml
+- type: MCPServer
+  url: mcp/opusclip-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: AgenticAccess
+  url: agentic-access/opusclip-agentic-access.yml
+- type: LLMsTxt
+  url: llms/opusclip-llms.txt
+- type: WellKnown
+  url: well-known/opusclip-well-known.yml
+- type: SecurityTxt
+  url: well-known/opusclip-security.txt
+- type: VulnerabilityDisclosure
+  url: security/opusclip-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.opus.pro/.well-known/security.txt
+- type: DomainSecurity
+  url: security/opusclip-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 22
+  pass: local-v1

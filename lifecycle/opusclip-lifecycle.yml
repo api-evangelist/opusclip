@@ -1,0 +1,16 @@
+generated: '2026-07-20'
+method: searched
+source: https://help.opus.pro/api-reference/overview
+versioning:
+  scheme: unversioned path prefix (/api/*); API generations referenced as v2 in docs
+  docs: https://help.opus.pro/api-reference/overview
+  spec_version: '1.0'
+status_page: https://status.opus.pro
+changelog: https://opusclip.canny.io/changelog
+retention:
+  projects_expire_after_days: 30
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No formal deprecation/Sunset (RFC 8594) policy published at enrichment time.
+deprecated_operations: []
