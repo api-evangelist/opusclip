@@ -1,0 +1,671 @@
+{
+  "item": [
+    {
+      "id": "c053174f-be05-4a2d-8050-e80e99945870",
+      "name": "social-posting",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "99fe98e8-228c-4624-9a1c-55d9c944af8d",
+          "name": "Social Account Controller get Social Accounts",
+          "request": {
+            "name": "Social Account Controller get Social Accounts",
+            "description": {
+              "content": "Retrieve the connected social destinations available for social posting.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "social-accounts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) Query type"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "c0067009-6922-4c20-a3e4-b3a96f36c5e6",
+              "name": "Successfully retrieved social accounts",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "social-accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "mine"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"postAccountId\": \"postAccountId_xxx1\",\n      \"subAccountId\": \"subAccountId_xxx1\",\n      \"platform\": \"FACEBOOK_PAGE\",\n      \"extUserId\": \"extUserId_xxx\",\n      \"extUserName\": \"Page Name\",\n      \"extUserPictureLink\": \"https://example.com/avatar.png\",\n      \"extUserProfileLink\": \"https://www.facebook.com/page_id\"\n    },\n    {\n      \"postAccountId\": \"postAccountId_xxx2\",\n      \"platform\": \"TIKTOK_BUSINESS\",\n      \"extUserId\": \"extUserId_xxx\",\n      \"extUserName\": \"tiktok_account\",\n      \"extUserPictureLink\": \"https://example.com/avatar.jpeg\",\n      \"extUserProfileLink\": \"https://www.tiktok.com/@username\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8e97c1cd-c3c0-460d-acbf-aac9eafa26ed",
+          "name": "Social Copy Job Controller create Social Copy Job",
+          "request": {
+            "name": "Social Copy Job Controller create Social Copy Job",
+            "description": {
+              "content": "Create an asynchronous social copy generation job for a specific clip and destination account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "social-copy-jobs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"projectId\": \"<string>\",\n  \"clipId\": \"<string>\",\n  \"postAccountId\": \"<string>\",\n  \"subAccountId\": \"<string>\",\n  \"prompt\": \"<string>\",\n  \"forceRegenerate\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b2288983-3992-4b89-9cc7-208ba1e820d5",
+              "name": "Successfully created a social copy generation job",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "social-copy-jobs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"projectId\": \"P0000000demo\",\n  \"clipId\": \"CUexample1\",\n  \"postAccountId\": \"postAccountId_xxx1\",\n  \"subAccountId\": \"subAccountId_xxx1\",\n  \"prompt\": \"Write the caption in a playful, witty tone that uses humor to keep the audience engaged, while ending with a clear call to action.\",\n  \"forceRegenerate\": false\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"jobId\": \"96e3d68c-49ef-4c19-b3b6-595f9564537c\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9baf1e21-5be8-40d6-8977-eaa1a9ba8b26",
+          "name": "Social Copy Job Controller get Social Copy Job",
+          "request": {
+            "name": "Social Copy Job Controller get Social Copy Job",
+            "description": {
+              "content": "Get the current status and generated copy for a social copy generation job.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "social-copy-jobs",
+                ":jobId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "jobId",
+                  "description": "(Required) Unique ID of the social copy generation job"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "da1bfbf2-d3ee-4bae-99c5-5439fe63c6ad",
+              "name": "Successfully retrieved the social copy generation result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "social-copy-jobs",
+                    ":jobId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "jobId",
+                      "description": "(Required) Unique ID of the social copy generation job"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"jobId\": \"96e3d68c-49ef-4c19-b3b6-595f9564537c\",\n    \"status\": \"COMPLETED\",\n    \"cached\": false,\n    \"title\": \"My Daughter's 'Gift' at 3 AM\",\n    \"description\": \"Thought I was losing my mind. Hear walking at 3 AM, check the house - everyone's asleep. Then I see it... my daughter's 'gift' moved. My wife has some explaining to do!\",\n    \"hashtags\": \"#ParentingFails #CreepyKids #MomLife #FunnyParenting #WhatDidISignUpFor\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1ea24972-d68d-4251-9913-e7147c82355b",
+          "name": "Post Task Controller create Post Task",
+          "request": {
+            "name": "Post Task Controller create Post Task",
+            "description": {
+              "content": "Publish a clip immediately to a connected social account. Each X (formerly Twitter) post costs 1 credit.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "post-tasks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"projectId\": \"<string>\",\n  \"clipId\": \"<string>\",\n  \"postAccountId\": \"<string>\",\n  \"postDetail\": {\n    \"title\": \"<string>\",\n    \"mediaType\": \"<string>\",\n    \"custom\": {\n      \"description\": \"<string>\",\n      \"privacy\": \"<string>\"\n    }\n  },\n  \"subAccountId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "643c45e3-fb11-4a39-8b65-d918a12492a8",
+              "name": "Successfully created a post task",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "post-tasks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"projectId\": \"P0000000demo\",\n  \"clipId\": \"qU3iVMSO77\",\n  \"postAccountId\": \"postAccountId_xxx1\",\n  \"subAccountId\": \"subAccountId_xxx1\",\n  \"postDetail\": {\n    \"title\": \"My Daughter's Creepy 3 AM Visitor\",\n    \"custom\": {\n      \"description\": \"Okay, so my daughter got a doll that can apparently move on its own. Last night at 3 AM, I heard footsteps, went to check, and this thing had moved! Totally thought I was losing my mind. Anyone else's toys play tricks? #CreepyDoll #HauntedHouse #MomLife #ParentingFails #ScaryStories\",\n      \"privacy\": \"public\"\n    },\n    \"mediaType\": \"video\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"postId\": \"17722461986440WKW-FACEBOOK_PAGE\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "626db412-6d82-4497-927b-b63eb84499c4",
+          "name": "Publish Schedule Controller create Publish Schedule",
+          "request": {
+            "name": "Publish Schedule Controller create Publish Schedule",
+            "description": {
+              "content": "Schedule a clip to be published later. The `publishAt` value must be a future UTC ISO 8601 timestamp. Each X (formerly Twitter) post costs 1 credit.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "publish-schedules"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"projectId\": \"<string>\",\n  \"clipId\": \"<string>\",\n  \"postAccountId\": \"<string>\",\n  \"postDetail\": {\n    \"title\": \"<string>\",\n    \"mediaType\": \"<string>\",\n    \"custom\": {\n      \"description\": \"<string>\",\n      \"privacy\": \"<string>\"\n    }\n  },\n  \"publishAt\": \"<string>\",\n  \"subAccountId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d71e0eb7-982c-4ba4-985c-bf34cd493acf",
+              "name": "Successfully created a publish schedule",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "publish-schedules"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"projectId\": \"P0000000demo\",\n  \"clipId\": \"qU3iVMSO77\",\n  \"postAccountId\": \"postAccountId_xxx1\",\n  \"subAccountId\": \"subAccountId_xxx1\",\n  \"postDetail\": {\n    \"title\": \"My Daughter's Creepy 3 AM Visitor\",\n    \"custom\": {\n      \"description\": \"Okay, so my daughter got a doll that can apparently move on its own. Last night at 3 AM, I heard footsteps, went to check, and this thing had moved! Totally thought I was losing my mind. Anyone else's toys play tricks? #CreepyDoll #HauntedHouse #MomLife #ParentingFails #ScaryStories\",\n      \"privacy\": \"public\"\n    },\n    \"mediaType\": \"video\"\n  },\n  \"publishAt\": \"2026-03-01T16:00:00.000Z\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"scheduleId\": \"1772177588135sHuZ-FACEBOOK_PAGE\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "faccb5f3-c4e7-4506-8dd6-9a48ec41a0ca",
+          "name": "Publish Schedule Controller cancel Publish Schedule",
+          "request": {
+            "name": "Publish Schedule Controller cancel Publish Schedule",
+            "description": {
+              "content": "Cancel a scheduled publish task before its publish time.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "publish-schedules",
+                ":scheduleId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "scheduleId",
+                  "description": "(Required) Unique ID of the schedule task to cancel"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "345fd344-f24c-4e5f-8eba-ada66c4e63a6",
+              "name": "Successfully canceled the publish schedule",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "publish-schedules",
+                    ":scheduleId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "scheduleId",
+                      "description": "(Required) Unique ID of the schedule task to cancel"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.opus.pro",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e94c5e1b-bd16-4dd5-a5e3-f60b48bbe10b",
+    "name": "Clip brand-templates social-posting API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Clip API documentation",
+      "type": "text/plain"
+    }
+  }
+}

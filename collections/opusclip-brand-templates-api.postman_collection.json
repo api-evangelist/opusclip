@@ -1,0 +1,128 @@
+{
+  "item": [
+    {
+      "id": "8c380fe1-5a38-475d-84d5-e8affaf82ff2",
+      "name": "brand-templates",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5ec04363-cd92-4d12-838f-3a2dd91161a8",
+          "name": "Brand Template Controller get Templates",
+          "request": {
+            "name": "Brand Template Controller get Templates",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "brand-templates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "e5200db6-a46e-4438-a16e-12182892d01e",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "brand-templates"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"templateId\": \"cm32g2poc0002t5bnhmg2kfyx\",\n    \"name\": \"Karaoke Template\",\n    \"isDefault\": true,\n    \"preferences\": {\n      \"enableAutoLayout\": false,\n      \"enableFillLayout\": false,\n      \"enableFitLayout\": false,\n      \"fitLayoutCropRatio\": \"4:3\",\n      \"enableSplitLayout\": true,\n      \"enableThreeLayout\": true,\n      \"enableFourLayout\": true,\n      \"enableScreenLayout\": true,\n      \"enableVisualHook\": false,\n      \"enableWatermark\": false,\n      \"enableCrop\": true,\n      \"enableCaption\": true,\n      \"enableUppercase\": true,\n      \"enableHighlight\": true,\n      \"enableEmoji\": true,\n      \"font\": {\n        \"color\": \"#ffffff\",\n        \"style\": [\n          \"900\"\n        ],\n        \"family\": \"Komika-axis\",\n        \"stroke\": {\n          \"enabled\": false,\n          \"color\": \"#000000FF\",\n          \"width\": 16\n        },\n        \"shadow\": {\n          \"enabled\": true,\n          \"color\": \"#FFFFFFFF\",\n          \"x\": 2,\n          \"y\": 2,\n          \"blur\": 16\n        }\n      },\n      \"highlightColor\": {\n        \"primary\": \"#04f827\",\n        \"secondary\": \"#FFFD03\"\n      }\n    },\n    \"type\": \"PresetOverwrite\"\n  },\n  {\n    \"templateId\": \"cm32g2poc0002t5bnhmg2kfyx\",\n    \"name\": \"Karaoke Template\",\n    \"isDefault\": true,\n    \"preferences\": {\n      \"enableAutoLayout\": false,\n      \"enableFillLayout\": false,\n      \"enableFitLayout\": false,\n      \"fitLayoutCropRatio\": \"4:3\",\n      \"enableSplitLayout\": true,\n      \"enableThreeLayout\": true,\n      \"enableFourLayout\": true,\n      \"enableScreenLayout\": true,\n      \"enableVisualHook\": false,\n      \"enableWatermark\": false,\n      \"enableCrop\": true,\n      \"enableCaption\": true,\n      \"enableUppercase\": true,\n      \"enableHighlight\": true,\n      \"enableEmoji\": true,\n      \"font\": {\n        \"color\": \"#ffffff\",\n        \"style\": [\n          \"900\"\n        ],\n        \"family\": \"Komika-axis\",\n        \"stroke\": {\n          \"enabled\": false,\n          \"color\": \"#000000FF\",\n          \"width\": 16\n        },\n        \"shadow\": {\n          \"enabled\": true,\n          \"color\": \"#FFFFFFFF\",\n          \"x\": 2,\n          \"y\": 2,\n          \"blur\": 16\n        }\n      },\n      \"highlightColor\": {\n        \"primary\": \"#04f827\",\n        \"secondary\": \"#FFFD03\"\n      }\n    },\n    \"type\": \"PresetOverwrite\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.opus.pro",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f774d10c-07a6-40c6-b5da-4d2618db2edb",
+    "name": "Clip brand-templates API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Clip API documentation",
+      "type": "text/plain"
+    }
+  }
+}

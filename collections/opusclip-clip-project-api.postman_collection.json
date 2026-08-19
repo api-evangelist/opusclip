@@ -1,0 +1,364 @@
+{
+  "item": [
+    {
+      "id": "66ca0843-842e-43d7-838a-6c11bdfa8c96",
+      "name": "clip-project",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1d53d9db-9fe5-4cf5-a387-83788a96b8fe",
+          "name": "Clip Project Controller create Clip Project",
+          "request": {
+            "name": "Clip Project Controller create Clip Project",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "clip-projects"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"videoUrl\": \"<string>\",\n  \"conclusionActions\": [\n    {\n      \"type\": \"<string>\",\n      \"notifyFailure\": false,\n      \"email\": \"<string>\",\n      \"url\": \"<string>\"\n    },\n    {\n      \"type\": \"<string>\",\n      \"notifyFailure\": false,\n      \"email\": \"<string>\",\n      \"url\": \"<string>\"\n    }\n  ],\n  \"curationPref\": {\n    \"range\": null,\n    \"genre\": \"Auto\"\n  },\n  \"importPref\": {\n    \"sourceLang\": \"auto\"\n  },\n  \"brandTemplateId\": null\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b9645169-c401-4a0a-8985-66915f425cde",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "clip-projects"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"videoUrl\": \"https://www.youtube.com/watch?v=LXvv6CbGg8A\",\n  \"conclusionActions\": [\n    {\n      \"type\": \"EMAIL\",\n      \"notifyFailure\": true,\n      \"email\": \"opusclip@opus.pro\"\n    }\n  ],\n  \"curationPref\": {\n    \"topicKeywords\": [\n      \"Fancy Words\"\n    ],\n    \"range\": {\n      \"startSec\": 106,\n      \"endSec\": 204\n    },\n    \"genre\": \"Auto\"\n  },\n  \"importPref\": {\n    \"sourceLang\": \"auto\"\n  },\n  \"brandTemplateId\": \"preset-fancy-Karaoke\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"P0000000demo\",\n  \"userId\": \"google-oauth2|100000000000000000001\",\n  \"orgId\": \"org_Example00000001\",\n  \"isDeleted\": false,\n  \"isPurged\": false,\n  \"projectId\": \"P0000000demo\",\n  \"sourcePlatform\": \"YOUTUBE\",\n  \"sourceId\": \"YT_tEXaoozFRes\",\n  \"labels\": [],\n  \"productTier\": \"PRO\",\n  \"stage\": \"QUEUED\",\n  \"storageSize\": 0,\n  \"storageStatus\": \"TEMPORARY\",\n  \"storageExpireAt\": \"2024-12-19T08:17:42.832Z\",\n  \"createdAt\": \"2024-11-19T08:17:42.832Z\",\n  \"updatedAt\": \"2024-11-19T08:17:42.860Z\",\n  \"clusterJobId\": \"FP.P0000000demo:20241119081742853.FP\",\n  \"cluster\": \"gold\",\n  \"visibility\": \"DEFAULT\",\n  \"permissions\": [\n    \"PROJECT_SHARE\",\n    \"PROJECT_EDIT\",\n    \"PROJECT_VIEW\"\n  ],\n  \"promptRecommendations\": [\n    \"Foo\",\n    \"Boo\"\n  ],\n  \"sourceUri\": \"string\",\n  \"model\": \"ClipBasic\",\n  \"error\": \"string\",\n  \"stallCount\": 2823.5099441302823,\n  \"workerUrl\": \"string\",\n  \"curationPref\": {\n    \"clipDurations\": [\n      [\n        0,\n        30\n      ],\n      [\n        30,\n        60\n      ],\n      [\n        60,\n        90\n      ],\n      [\n        90,\n        180\n      ]\n    ],\n    \"topicKeywords\": [\n      \"Fancy Words\"\n    ],\n    \"range\": {\n      \"startSec\": 106,\n      \"endSec\": 204\n    },\n    \"genre\": \"Auto\"\n  },\n  \"renderPref\": {\n    \"enableAutoLayout\": false,\n    \"enableScreenLayout\": true,\n    \"enableCrop\": true,\n    \"enableCaption\": true,\n    \"enableUppercase\": true,\n    \"enableHighlight\": true,\n    \"enableEmoji\": true,\n    \"enableFillLayout\": false,\n    \"enableSplitLayout\": true,\n    \"enableThreeLayout\": true,\n    \"enableFourLayout\": true,\n    \"enableFitLayout\": false,\n    \"fitLayoutCropRatio\": \"4:3\",\n    \"enableVisualHook\": false,\n    \"enableWatermark\": false,\n    \"font\": {\n      \"color\": \"#ffffff\",\n      \"style\": [\n        \"900\"\n      ],\n      \"family\": \"Komika-axis\",\n      \"stroke\": {\n        \"enabled\": false,\n        \"color\": \"#000000FF\",\n        \"width\": 16\n      },\n      \"shadow\": {\n        \"enabled\": true,\n        \"color\": \"#FFFFFFFF\",\n        \"x\": 2,\n        \"y\": 2,\n        \"blur\": 16\n      }\n    },\n    \"highlightColor\": {\n      \"primary\": \"#ff0000\",\n      \"secondary\": \"#00ff00\"\n    },\n    \"layoutAspectRatio\": \"portrait\",\n    \"enableBroll\": false\n  },\n  \"refundStatus\": \"string\",\n  \"importPref\": {\n    \"sourceLang\": \"en\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e501f672-072a-4293-8ffd-fff3de2048a3",
+          "name": "Clip Project Controller get Clip Project Detail",
+          "request": {
+            "name": "Clip Project Controller get Clip Project Detail",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "clip-projects",
+                ":projectId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "projectId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "1d06391d-4d66-4bdb-952b-e46149e8fb6b",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "clip-projects",
+                    ":projectId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "projectId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"P0000000demo\",\n  \"userId\": \"google-oauth2|100000000000000000001\",\n  \"orgId\": \"org_Example00000001\",\n  \"isDeleted\": false,\n  \"isPurged\": false,\n  \"projectId\": \"P0000000demo\",\n  \"sourcePlatform\": \"YOUTUBE\",\n  \"sourceId\": \"YT_tEXaoozFRes\",\n  \"labels\": [],\n  \"productTier\": \"PRO\",\n  \"stage\": \"QUEUED\",\n  \"storageSize\": 0,\n  \"storageStatus\": \"TEMPORARY\",\n  \"storageExpireAt\": \"2024-12-19T08:17:42.832Z\",\n  \"createdAt\": \"2024-11-19T08:17:42.832Z\",\n  \"updatedAt\": \"2024-11-19T08:17:42.860Z\",\n  \"clusterJobId\": \"FP.P0000000demo:20241119081742853.FP\",\n  \"cluster\": \"gold\",\n  \"visibility\": \"DEFAULT\",\n  \"permissions\": [\n    \"PROJECT_SHARE\",\n    \"PROJECT_EDIT\",\n    \"PROJECT_VIEW\"\n  ],\n  \"promptRecommendations\": [\n    \"Foo\",\n    \"Boo\"\n  ],\n  \"sourceUri\": \"string\",\n  \"model\": \"ClipBasic\",\n  \"error\": \"string\",\n  \"stallCount\": 8960.8232792364,\n  \"workerUrl\": \"string\",\n  \"curationPref\": {\n    \"clipDurations\": [\n      [\n        0,\n        30\n      ],\n      [\n        30,\n        60\n      ],\n      [\n        60,\n        90\n      ],\n      [\n        90,\n        180\n      ]\n    ],\n    \"topicKeywords\": [\n      \"Fancy Words\"\n    ],\n    \"range\": {\n      \"startSec\": 106,\n      \"endSec\": 204\n    },\n    \"genre\": \"Auto\"\n  },\n  \"renderPref\": {\n    \"enableAutoLayout\": false,\n    \"enableScreenLayout\": true,\n    \"enableCrop\": true,\n    \"enableCaption\": true,\n    \"enableUppercase\": true,\n    \"enableHighlight\": true,\n    \"enableEmoji\": true,\n    \"enableFillLayout\": false,\n    \"enableSplitLayout\": true,\n    \"enableThreeLayout\": true,\n    \"enableFourLayout\": true,\n    \"enableFitLayout\": false,\n    \"fitLayoutCropRatio\": \"4:3\",\n    \"enableVisualHook\": false,\n    \"enableWatermark\": false,\n    \"font\": {\n      \"color\": \"#ffffff\",\n      \"style\": [\n        \"900\"\n      ],\n      \"family\": \"Komika-axis\",\n      \"stroke\": {\n        \"enabled\": false,\n        \"color\": \"#000000FF\",\n        \"width\": 16\n      },\n      \"shadow\": {\n        \"enabled\": true,\n        \"color\": \"#FFFFFFFF\",\n        \"x\": 2,\n        \"y\": 2,\n        \"blur\": 16\n      },\n      \"id\": \"font123\",\n      \"type\": \"CustomizedFont\",\n      \"name\": \"Arial\",\n      \"path\": \"/fonts/arial.ttf\",\n      \"size\": \"Large\",\n      \"numericalSize\": 50,\n      \"textDecoration\": \"underline\"\n    },\n    \"highlightColor\": {\n      \"primary\": \"#ff0000\",\n      \"secondary\": \"#00ff00\"\n    },\n    \"layoutAspectRatio\": \"portrait\",\n    \"enableBroll\": false\n  },\n  \"refundStatus\": \"string\",\n  \"importPref\": {\n    \"sourceLang\": \"en\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4fa02b53-75dd-4229-9d69-2905d1357bfe",
+          "name": "Clip Project Controller update Clip Project Visibility",
+          "request": {
+            "name": "Clip Project Controller update Clip Project Visibility",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "clip-projects",
+                ":projectId",
+                "update-visibility"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "projectId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"visibility\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d59d9ac4-4584-41ca-bde4-7e7878502021",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "clip-projects",
+                    ":projectId",
+                    "update-visibility"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "projectId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"visibility\": \"PUBLIC\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"P0000000demo\",\n  \"userId\": \"google-oauth2|100000000000000000001\",\n  \"orgId\": \"org_Example00000001\",\n  \"isDeleted\": false,\n  \"isPurged\": false,\n  \"projectId\": \"P0000000demo\",\n  \"sourcePlatform\": \"YOUTUBE\",\n  \"sourceId\": \"YT_tEXaoozFRes\",\n  \"labels\": [],\n  \"productTier\": \"PRO\",\n  \"stage\": \"QUEUED\",\n  \"storageSize\": 0,\n  \"storageStatus\": \"TEMPORARY\",\n  \"storageExpireAt\": \"2024-12-19T08:17:42.832Z\",\n  \"createdAt\": \"2024-11-19T08:17:42.832Z\",\n  \"updatedAt\": \"2024-11-19T08:17:42.860Z\",\n  \"clusterJobId\": \"FP.P0000000demo:20241119081742853.FP\",\n  \"cluster\": \"gold\",\n  \"visibility\": \"DEFAULT\",\n  \"permissions\": [\n    \"PROJECT_SHARE\",\n    \"PROJECT_EDIT\",\n    \"PROJECT_VIEW\"\n  ],\n  \"promptRecommendations\": [\n    \"Foo\",\n    \"Boo\"\n  ],\n  \"sourceUri\": \"string\",\n  \"model\": \"ClipBasic\",\n  \"error\": \"string\",\n  \"stallCount\": 8960.8232792364,\n  \"workerUrl\": \"string\",\n  \"curationPref\": {\n    \"clipDurations\": [\n      [\n        0,\n        30\n      ],\n      [\n        30,\n        60\n      ],\n      [\n        60,\n        90\n      ],\n      [\n        90,\n        180\n      ]\n    ],\n    \"topicKeywords\": [\n      \"Fancy Words\"\n    ],\n    \"range\": {\n      \"startSec\": 106,\n      \"endSec\": 204\n    },\n    \"genre\": \"Auto\"\n  },\n  \"renderPref\": {\n    \"enableAutoLayout\": false,\n    \"enableScreenLayout\": true,\n    \"enableCrop\": true,\n    \"enableCaption\": true,\n    \"enableUppercase\": true,\n    \"enableHighlight\": true,\n    \"enableEmoji\": true,\n    \"enableFillLayout\": false,\n    \"enableSplitLayout\": true,\n    \"enableThreeLayout\": true,\n    \"enableFourLayout\": true,\n    \"enableFitLayout\": false,\n    \"fitLayoutCropRatio\": \"4:3\",\n    \"enableVisualHook\": false,\n    \"enableWatermark\": false,\n    \"font\": {\n      \"color\": \"#ffffff\",\n      \"style\": [\n        \"900\"\n      ],\n      \"family\": \"Komika-axis\",\n      \"stroke\": {\n        \"enabled\": false,\n        \"color\": \"#000000FF\",\n        \"width\": 16\n      },\n      \"shadow\": {\n        \"enabled\": true,\n        \"color\": \"#FFFFFFFF\",\n        \"x\": 2,\n        \"y\": 2,\n        \"blur\": 16\n      },\n      \"id\": \"font123\",\n      \"type\": \"CustomizedFont\",\n      \"name\": \"Arial\",\n      \"path\": \"/fonts/arial.ttf\",\n      \"size\": \"Large\",\n      \"numericalSize\": 50,\n      \"textDecoration\": \"underline\"\n    },\n    \"highlightColor\": {\n      \"primary\": \"#ff0000\",\n      \"secondary\": \"#00ff00\"\n    },\n    \"layoutAspectRatio\": \"portrait\",\n    \"enableBroll\": false\n  },\n  \"refundStatus\": \"string\",\n  \"importPref\": {\n    \"sourceLang\": \"en\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.opus.pro",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "2df29412-8277-4314-ab36-25d309a88564",
+    "name": "Clip brand-templates clip-project API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Clip API documentation",
+      "type": "text/plain"
+    }
+  }
+}

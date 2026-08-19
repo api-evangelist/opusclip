@@ -17,7 +17,6 @@ server:
   - Cline
   - Continue
 tools:
-# Read tools
 - name: opusclip_whoami
 - name: opusclip_get_usage
 - name: opusclip_list_projects
@@ -30,7 +29,6 @@ tools:
 - name: opusclip_get_editing_script
 - name: opusclip_get_transcript
 - name: opusclip_get_social_copy_job
-# Write tools
 - name: opusclip_submit_project
 - name: opusclip_create_upload_link
 - name: opusclip_apply_editing_script
@@ -45,3 +43,10 @@ tools:
 - name: opusclip_create_post_task
 - name: opusclip_schedule_publish
 - name: opusclip_unschedule_publish
+deployment:
+  mode: remote
+  endpoint: https://mcp.opus.pro/mcp
+  verified: probed
+  probe: wall
+  checked: '2026-08-12'
+  source: catalog MCP census
