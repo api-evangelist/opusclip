@@ -37,6 +37,17 @@ tags:
 - Company
 - Consumer
 - Video
+- Artificial Intelligence
+- Video Editing
+- Short-Form Video
+- Social-Media
+- Content Creation
+- MCP
+- Developer API
+tags_raw:
+- Company
+- Consumer
+- Video
 - AI
 - Video Editing
 - Short-Form Video
@@ -129,6 +140,8 @@ apis:
   humanURL: https://help.opus.pro/api-reference/overview
   baseURL: https://api.opus.pro
   tags:
+  - Collection
+  tags_raw:
   - collection
   properties:
   - type: OpenAPI
@@ -181,6 +194,8 @@ apis:
   humanURL: https://help.opus.pro/api-reference/overview
   baseURL: https://api.opus.pro
   tags:
+  - Enterprise
+  tags_raw:
   - enterprise
   properties:
   - type: OpenAPI
@@ -311,6 +326,8 @@ apis:
   humanURL: https://help.opus.pro/api-reference/overview
   baseURL: https://api.opus.pro
   tags:
+  - Transcripts
+  tags_raw:
   - transcripts
   properties:
   - type: OpenAPI
