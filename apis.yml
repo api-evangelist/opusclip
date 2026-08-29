@@ -11,6 +11,18 @@ description: >-
   Skill, webhooks signed with HMAC-SHA256, an OpenAPI 3.0 spec, llms.txt, and
   security.txt. API access requires an Enterprise, Pro (Beta), or Max plan.
 url: https://raw.githubusercontent.com/api-evangelist/opusclip/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
