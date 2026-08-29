@@ -312,6 +312,9 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: CapabilityMap
+  url: capabilities/opusclip-capability-edges.yml
+  name: OpusClip Business Capability Map
 - type: Overlay
   url: overlays/opusclip-openapi-overlay.yaml
 - type: DeveloperPortal
