@@ -76,101 +76,6 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    HighlightColorDto:
-      type: object
-      properties:
-        primary:
-          type: string
-          description: Primary highlight color.
-          example: '#ff0000'
-        secondary:
-          type: string
-          description: Secondary highlight color.
-          example: '#00ff00'
-      required:
-      - primary
-      - secondary
-    FontDto:
-      type: object
-      properties:
-        color:
-          type: string
-          description: The color of the font.
-          example: '#ffffff'
-        style:
-          description: The style of the font.
-          example:
-          - '900'
-          type: array
-          items:
-            type: string
-        family:
-          type: string
-          description: The family of the font.
-          example: Komika-axis
-        stroke:
-          description: The stroke settings of the font.
-          example:
-            enabled: false
-            color: '#000000FF'
-            width: 16
-          allOf:
-          - $ref: '#/components/schemas/StrokeDto'
-        shadow:
-          description: The shadow settings of the font.
-          example:
-            enabled: true
-            color: '#FFFFFFFF'
-            x: 2
-            y: 2
-            blur: 16
-          allOf:
-          - $ref: '#/components/schemas/ShadowDto'
-        id:
-          type: string
-          description: The ID of the font.
-          example: font123
-        type:
-          type: string
-          description: The type of the font.
-          example: CustomizedFont
-          enum:
-          - CustomizedFont
-          - System
-        name:
-          type: string
-          description: The name of the font.
-          example: Arial
-        path:
-          type: string
-          description: The storage path of the font.
-          example: /fonts/arial.ttf
-        size:
-          type: string
-          description: The size of the font.
-          example: Large
-          enum:
-          - Large
-          - Middle
-          - Small
-        numericalSize:
-          type: number
-          description: The numerical size of the font.
-          example: 50
-        textDecoration:
-          type: string
-          description: The text decoration of the font.
-          example: underline
-          enum:
-          - line-through
-          - underline
-          - ''
-      required:
-      - color
-      - style
-      - family
-      - stroke
-      - shadow
     RenderPreferenceDto:
       type: object
       properties:
@@ -304,6 +209,31 @@ components:
       - enableWatermark
       - font
       - highlightColor
+    LayoutAspectRatio:
+      type: string
+      enum:
+      - portrait
+      - landscape
+      - square
+    StrokeDto:
+      type: object
+      properties:
+        enabled:
+          type: boolean
+          description: Indicates if the stroke is enabled.
+          example: true
+        color:
+          type: string
+          description: The color of the stroke.
+          example: '#000000FF'
+        width:
+          type: number
+          description: The width of the stroke.
+          example: 16
+      required:
+      - enabled
+      - color
+      - width
     ExportableClipRepresentation:
       type: object
       properties:
@@ -459,12 +389,20 @@ components:
       - updatedAt
       - productTier
       - renderPref
-    LayoutAspectRatio:
-      type: string
-      enum:
-      - portrait
-      - landscape
-      - square
+    HighlightColorDto:
+      type: object
+      properties:
+        primary:
+          type: string
+          description: Primary highlight color.
+          example: '#ff0000'
+        secondary:
+          type: string
+          description: Secondary highlight color.
+          example: '#00ff00'
+      required:
+      - primary
+      - secondary
     ShadowDto:
       type: object
       properties:
@@ -498,25 +436,87 @@ components:
       - x
       - y
       - blur
-    StrokeDto:
+    FontDto:
       type: object
       properties:
-        enabled:
-          type: boolean
-          description: Indicates if the stroke is enabled.
-          example: true
         color:
           type: string
-          description: The color of the stroke.
-          example: '#000000FF'
-        width:
+          description: The color of the font.
+          example: '#ffffff'
+        style:
+          description: The style of the font.
+          example:
+          - '900'
+          type: array
+          items:
+            type: string
+        family:
+          type: string
+          description: The family of the font.
+          example: Komika-axis
+        stroke:
+          description: The stroke settings of the font.
+          example:
+            enabled: false
+            color: '#000000FF'
+            width: 16
+          allOf:
+          - $ref: '#/components/schemas/StrokeDto'
+        shadow:
+          description: The shadow settings of the font.
+          example:
+            enabled: true
+            color: '#FFFFFFFF'
+            x: 2
+            y: 2
+            blur: 16
+          allOf:
+          - $ref: '#/components/schemas/ShadowDto'
+        id:
+          type: string
+          description: The ID of the font.
+          example: font123
+        type:
+          type: string
+          description: The type of the font.
+          example: CustomizedFont
+          enum:
+          - CustomizedFont
+          - System
+        name:
+          type: string
+          description: The name of the font.
+          example: Arial
+        path:
+          type: string
+          description: The storage path of the font.
+          example: /fonts/arial.ttf
+        size:
+          type: string
+          description: The size of the font.
+          example: Large
+          enum:
+          - Large
+          - Middle
+          - Small
+        numericalSize:
           type: number
-          description: The width of the stroke.
-          example: 16
+          description: The numerical size of the font.
+          example: 50
+        textDecoration:
+          type: string
+          description: The text decoration of the font.
+          example: underline
+          enum:
+          - line-through
+          - underline
+          - ''
       required:
-      - enabled
       - color
-      - width
+      - style
+      - family
+      - stroke
+      - shadow
   securitySchemes:
     bearer:
       scheme: bearer

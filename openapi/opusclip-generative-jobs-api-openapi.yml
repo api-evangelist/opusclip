@@ -58,6 +58,38 @@ paths:
       - generative-jobs
 components:
   schemas:
+    GenerativeJobStatusResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          enum:
+          - QUEUED
+          - PROCESSING
+          - CONCLUDED
+          - FAILED
+          - UNKNOWN
+          description: The job status.
+        result:
+          $ref: '#/components/schemas/GenerativeJobResult'
+          description: Present when `status` is `CONCLUDED` and the job produced output.
+        progress:
+          $ref: '#/components/schemas/GenerativeJobProgress'
+          description: Present while the job is `QUEUED` or `PROCESSING`, and on `CONCLUDED` as a final snapshot.
+        error:
+          $ref: '#/components/schemas/GenerativeJobError'
+          description: Present when `status` is `FAILED` or when result extraction failed for a `CONCLUDED` job.
+      required:
+      - status
+    GenerativeJobCreateResponse:
+      type: object
+      properties:
+        jobId:
+          type: string
+          description: The generated job ID. Use it with `GET /api/generative-jobs/{jobId}` to poll status and fetch results.
+          example: thumbnail-aB3xR7nQ8z
+      required:
+      - jobId
     GenerativeThumbnailJobRequest:
       type: object
       properties:
@@ -95,6 +127,15 @@ components:
         message:
           type: string
           description: Human-readable error message.
+    GenerativeJobResult:
+      type: object
+      description: Result payload. For `thumbnail` jobs, includes `generatedThumbnailUris`.
+      properties:
+        generatedThumbnailUris:
+          type: array
+          items:
+            type: string
+          description: CDN URLs of the produced thumbnails. Typically 4 images per successful thumbnail job.
     GenerativeJobProgress:
       type: object
       description: Progress snapshot for an in-flight or completed generative job.
@@ -112,47 +153,6 @@ components:
           description: Coarse progress between 0 and 1.
           minimum: 0
           maximum: 1
-    GenerativeJobCreateResponse:
-      type: object
-      properties:
-        jobId:
-          type: string
-          description: The generated job ID. Use it with `GET /api/generative-jobs/{jobId}` to poll status and fetch results.
-          example: thumbnail-aB3xR7nQ8z
-      required:
-      - jobId
-    GenerativeJobStatusResponse:
-      type: object
-      properties:
-        status:
-          type: string
-          enum:
-          - QUEUED
-          - PROCESSING
-          - CONCLUDED
-          - FAILED
-          - UNKNOWN
-          description: The job status.
-        result:
-          $ref: '#/components/schemas/GenerativeJobResult'
-          description: Present when `status` is `CONCLUDED` and the job produced output.
-        progress:
-          $ref: '#/components/schemas/GenerativeJobProgress'
-          description: Present while the job is `QUEUED` or `PROCESSING`, and on `CONCLUDED` as a final snapshot.
-        error:
-          $ref: '#/components/schemas/GenerativeJobError'
-          description: Present when `status` is `FAILED` or when result extraction failed for a `CONCLUDED` job.
-      required:
-      - status
-    GenerativeJobResult:
-      type: object
-      description: Result payload. For `thumbnail` jobs, includes `generatedThumbnailUris`.
-      properties:
-        generatedThumbnailUris:
-          type: array
-          items:
-            type: string
-          description: CDN URLs of the produced thumbnails. Typically 4 images per successful thumbnail job.
   securitySchemes:
     bearer:
       scheme: bearer

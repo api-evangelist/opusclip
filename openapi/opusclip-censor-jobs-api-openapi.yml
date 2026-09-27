@@ -58,13 +58,6 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    CensorJobOptions:
-      type: object
-      properties:
-        beepSound:
-          type: boolean
-          description: Use beep sound instead of the censored words.
-          example: true
     CensorJobStatusResponse:
       type: object
       properties:
@@ -82,6 +75,13 @@ components:
           description: Error message.
       required:
       - status
+    CensorJobOptions:
+      type: object
+      properties:
+        beepSound:
+          type: boolean
+          description: Use beep sound instead of the censored words.
+          example: true
     CensorJobRequest:
       type: object
       properties:

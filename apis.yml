@@ -54,7 +54,7 @@ tags:
 - Artificial Intelligence
 - Video Editing
 - Short-Form Video
-- Social-Media
+- Social Media
 - Content Creation
 - MCP
 - Developer API
@@ -69,9 +69,10 @@ tags_raw:
 - Content Creation
 - MCP
 - Developer API
+- Social-Media
 apis:
 - aid: opusclip:opusclip-brand-templates-api
-  name: OpusClip brand-templates API
+  name: OpusClip Brand Templates API
   description: The brand-templates API from OpusClip — 1 operation(s) for brand-templates.
   humanURL: https://help.opus.pro/api-reference/overview
   baseURL: https://api.opus.pro
@@ -97,7 +98,7 @@ apis:
   - type: DataModel
     url: data-model/opusclip-data-model.yml
 - aid: opusclip:opusclip-censor-jobs-api
-  name: OpusClip censor-jobs API
+  name: OpusClip Censor Jobs API
   description: The censor-jobs API from OpusClip — 2 operation(s) for censor-jobs.
   humanURL: https://help.opus.pro/api-reference/overview
   baseURL: https://api.opus.pro
@@ -123,7 +124,7 @@ apis:
   - type: DataModel
     url: data-model/opusclip-data-model.yml
 - aid: opusclip:opusclip-clip-project-api
-  name: OpusClip clip-project API
+  name: OpusClip Clip Project API
   description: The clip-project API from OpusClip — 3 operation(s) for clip-project.
   humanURL: https://help.opus.pro/api-reference/overview
   baseURL: https://api.opus.pro
@@ -149,7 +150,7 @@ apis:
   - type: DataModel
     url: data-model/opusclip-data-model.yml
 - aid: opusclip:opusclip-collection-api
-  name: OpusClip collection API
+  name: OpusClip Collection API
   description: The collection API from OpusClip — 3 operation(s) for collection.
   humanURL: https://help.opus.pro/api-reference/overview
   baseURL: https://api.opus.pro
@@ -177,7 +178,7 @@ apis:
   - type: DataModel
     url: data-model/opusclip-data-model.yml
 - aid: opusclip:opusclip-collection-content-api
-  name: OpusClip collection-content API
+  name: OpusClip Collection Content API
   description: The collection-content API from OpusClip — 2 operation(s) for collection-content.
   humanURL: https://help.opus.pro/api-reference/overview
   baseURL: https://api.opus.pro
@@ -229,7 +230,7 @@ apis:
   - type: DataModel
     url: data-model/opusclip-data-model.yml
 - aid: opusclip:opusclip-generative-jobs-api
-  name: OpusClip generative-jobs API
+  name: OpusClip Generative Jobs API
   description: The generative-jobs API from OpusClip — 2 operation(s) for generative-jobs.
   humanURL: https://help.opus.pro/api-reference/overview
   baseURL: https://api.opus.pro
@@ -255,7 +256,7 @@ apis:
   - type: DataModel
     url: data-model/opusclip-data-model.yml
 - aid: opusclip:opusclip-social-posting-api
-  name: OpusClip social-posting API
+  name: OpusClip Social Posting API
   description: The social-posting API from OpusClip — 6 operation(s) for social-posting.
   humanURL: https://help.opus.pro/api-reference/overview
   baseURL: https://api.opus.pro
@@ -281,7 +282,7 @@ apis:
   - type: DataModel
     url: data-model/opusclip-data-model.yml
 - aid: opusclip:opusclip-transcripts-api
-  name: OpusClip transcripts API
+  name: OpusClip Transcripts API
   description: The transcripts API from OpusClip — 1 operation(s) for transcripts.
   humanURL: https://help.opus.pro/api-reference/overview
   baseURL: https://api.opus.pro
