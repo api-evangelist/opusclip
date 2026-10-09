@@ -1,0 +1,111 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://www.opus.pro/pricing
+sources:
+- https://www.opus.pro/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+  managed_tier: Starter
+published: true
+note: Consumer/business creator SaaS pricing page; Pro shows a credit-pack multiplier selector. API access
+  included in Pro (limited) and Business tiers.
+plan_count: 5
+currency: USD
+plans:
+- name: Free
+  price_text: $0 USD /mo
+  price: 0
+  currency: USD
+  period: month
+  unit: account
+  included_quota: 60 credits per month; Up to 1080p rendered clips; has watermark
+- name: Starter
+  price_text: $ 15 USD /mo
+  price: 15
+  currency: USD
+  period: month
+  unit: account
+  included_quota: 150 credits per month; 1 brand template
+- name: Pro
+  price_text: $ 29 USD
+  price: 29
+  currency: USD
+  period: month
+  unit: account
+  included_quota: 300 credits per month; team workspace with 2 seats; 2 brand templates; 6 social account
+    connections; Limited API Access
+  overage: On-demand credit top-ups
+- name: Pro (annual)
+  price_text: $ 174 billed annually
+  price: 174
+  currency: USD
+  period: year
+  unit: account
+  included_quota: 300 credits per month
+- name: Business
+  price_text: Custom pricing and packs
+  period: none
+  included_quota: Everything in Pro plus API & custom integrations, MSA, dedicated storage
+rate_limit_statements:
+- AI image B-Roll (50 clips/day)
+- AI Voice-over 20 per day
+- Speech enhancement 10 times/day
+- AI image B-Roll (3 clips/​month)
+- Zapier integration up to 300 credits/mo
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - hybrid
+  - metered
+  units:
+  - object
+  plans:
+  - name: Free
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - object
+    periods:
+    - month
+  - name: Starter
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - object
+    periods:
+    - month
+  - name: Pro
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - object
+    periods:
+    - month
+  - name: Pro (annual)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - object
+    periods:
+    - year
+  - name: Business
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods:
+    - none
