@@ -64,6 +64,160 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-OpusClip is a company surfaced as a portfolio company of softbank-vision-fund and added to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.
+OpusClip (opus.pro), operated by Opusclip Inc. of Mountain View, California, is an AI video platform used by 16M+ creators and businesses. It spans two products: OpusClip, an AI video-clipping tool that turns long-form videos into viral short clips with animated captions, AI reframing, virality scoring, AI B-roll, and multi-platform scheduling; and Agent Opus, an end-to-end AI video agent. OpusClip ships a public REST "Clip API" (https://api.opus.pro) authenticated with Bearer API keys, a hosted MCP server exposing 26 tools, a bundled CLI, a published Agent Skill, webhooks signed with HMAC-SHA256, an OpenAPI 3.0 spec, llms.txt, and security.txt. API access requires an Enterprise, Pro (Beta), or Max plan.
 
-Backed by: softbank-vision-fund
+**Areas:** Company · Consumer · Video · Artificial Intelligence · Video Editing · Short-Form Video · Social Media · Content Creation · MCP · Developer API
+
+## OpusClip on APIs.io
+
+Everything profiled for OpusClip is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/opusclip/](https://apis.io/providers/opusclip/)** — or go straight to one of the APIs or properties below.
+
+### APIs (9)
+
+- [OpusClip Brand Templates API](https://apis.io/apis/opusclip/opusclip-brand-templates-api/) — The brand-templates API from OpusClip — 1 operation(s) for brand-templates.
+- [OpusClip Censor Jobs API](https://apis.io/apis/opusclip/opusclip-censor-jobs-api/) — The censor-jobs API from OpusClip — 2 operation(s) for censor-jobs.
+- [OpusClip Clip Project API](https://apis.io/apis/opusclip/opusclip-clip-project-api/) — The clip-project API from OpusClip — 3 operation(s) for clip-project.
+- [OpusClip Collection API](https://apis.io/apis/opusclip/opusclip-collection-api/) — The collection API from OpusClip — 3 operation(s) for collection.
+- [OpusClip Collection Content API](https://apis.io/apis/opusclip/opusclip-collection-content-api/) — The collection-content API from OpusClip — 2 operation(s) for collection-content.
+- [OpusClip ExportableClip API](https://apis.io/apis/opusclip/opusclip-exportableclip-api/) — The ExportableClip API from OpusClip — 1 operation(s) for exportableclip.
+- [OpusClip Generative Jobs API](https://apis.io/apis/opusclip/opusclip-generative-jobs-api/) — The generative-jobs API from OpusClip — 2 operation(s) for generative-jobs.
+- [OpusClip Social Posting API](https://apis.io/apis/opusclip/opusclip-social-posting-api/) — The social-posting API from OpusClip — 6 operation(s) for social-posting.
+- [OpusClip Transcripts API](https://apis.io/apis/opusclip/opusclip-transcripts-api/) — The transcripts API from OpusClip — 1 operation(s) for transcripts.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Opusclip Webhooks](https://apis.io/asyncapis/opusclip/opusclip-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [opusclip](https://apis.io/servers/opusclip/opusclip/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Opusclip Agentic Access](https://apis.io/agentic-access/opusclip/opusclip-agentic-access/)
+
+#### Collections (11)
+
+Postman and Open Collection request collections.
+
+- [Clip brand-templates API](https://apis.io/collections/opusclip/open-opusclip-brand-templates-api/)
+- [Clip brand-templates censor-jobs API](https://apis.io/collections/opusclip/open-opusclip-censor-jobs-api/)
+- [Clip brand-templates clip-project API](https://apis.io/collections/opusclip/open-opusclip-clip-project-api/)
+- [Clip brand-templates collection API](https://apis.io/collections/opusclip/open-opusclip-collection-api/)
+- [Clip brand-templates collection-content API](https://apis.io/collections/opusclip/open-opusclip-collection-content-api/)
+- [Clip brand-templates enterprise API](https://apis.io/collections/opusclip/open-opusclip-enterprise-api/)
+- [Clip brand-templates exportable-clips API](https://apis.io/collections/opusclip/open-opusclip-exportable-clips-api/)
+- [Clip brand-templates ExportableClip API](https://apis.io/collections/opusclip/open-opusclip-exportableclip-api/)
+- [Clip brand-templates generative-jobs API](https://apis.io/collections/opusclip/open-opusclip-generative-jobs-api/)
+- [Clip brand-templates social-posting API](https://apis.io/collections/opusclip/open-opusclip-social-posting-api/)
+- [Clip brand-templates transcripts API](https://apis.io/collections/opusclip/open-opusclip-transcripts-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Opusclip Openapi Overlay](https://apis.io/overlays/opusclip/opusclip-openapi-overlay/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Opusclip Authentication](https://apis.io/security/opusclip/opusclip-authentication/)
+- [Opusclip Domain Security](https://apis.io/security/opusclip/opusclip-domain-security/)
+- [Opusclip Vulnerability Disclosure](https://apis.io/security/opusclip/opusclip-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Opusclip Plans Pricing](https://apis.io/plans/opusclip/opusclip-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Opusclip Rate Limits](https://apis.io/rate-limits/opusclip/opusclip-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.opus.pro/)
+- [Documentation](https://help.opus.pro/api-reference/overview)
+- [Getting started](https://help.opus.pro/api-reference/quickstart)
+- [API reference](https://help.opus.pro/api-reference/overview)
+- [Pricing](https://www.opus.pro/pricing)
+- [Sign up](https://clip.opus.pro/dashboard)
+- [Support](https://www.opus.pro/contact-support)
+- [Changelog](https://opusclip.canny.io/changelog)
+- [Blog](https://www.opus.pro/blog)
+- [Security](https://www.opus.pro/.well-known/security.txt)
+- [Terms of service](https://www.opus.pro/terms-of-service)
+- [Privacy policy](https://www.opus.pro/privacy-policy)
+- [GitHub](https://github.com/opus-pro)
+- [Status](https://status.opus.pro)
+
+## API Evangelist rating
+
+**Kin Score 60.4** — strong · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 52.1 |
+| Contract governance | 4.5 |
+| Operational transparency | 65.8 |
+| Developer ergonomics | 71.4 |
+| Access clarity | 76.3 |
+
+**Agent readiness 56.4** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | partial |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | yes |
+| Agent Skills | yes |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 28.2** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/opusclip/](https://apis.io/providers/opusclip/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for OpusClip: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/opusclip/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
